@@ -49,9 +49,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/fomantic-ui-css/semantic.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/fomantic-ui-css/semantic.min.js",
+              "node_modules/jquery/dist/jquery.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -144,6 +148,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "CallMeBeauty"
+    }
+  },
+  "defaultProject": "CallMeBeauty",
+  "cli": {
+    "analytics": "b73d3f81-0098-4352-9846-6d433f9838e7"
+  }
 }

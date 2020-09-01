@@ -1,0 +1,107 @@
+<div class="container mb-6">
+        <h1> Clothe Detail</h1>
+        
+    
+    <div class="row">
+        <div class="col-8">
+            <div class="row">
+                <div class="col-3">
+                    <strong>ID</strong>
+                </div>
+                <div class="col-3">
+                    <strong>:</strong>
+                </div>
+                <div class="col-4">
+                    <p>{{dress.id}}</p>
+                </div>
+            </div> 
+
+            <hr>
+
+            <div class="row">
+                <div class="col-3">
+                    <strong>Name</strong>
+                </div>
+                <div class="col-3">
+                    <strong>:</strong>
+                </div>
+                <div class="col-4">
+                    <p>{{dress.name}}</p>
+                </div>
+            </div> 
+
+            <hr>
+
+            <div class="row">
+                <div class="col-3">
+                    <strong>Type</strong>
+                </div>
+                <div class="col-3">
+                    <strong>:</strong>
+                </div>
+                <div class="col-4">
+                    <p>{{dress.type}}</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-3">
+                    <strong>Color</strong>
+                </div>
+                <div class="col-3">
+                    <strong>:</strong>
+                </div>
+                <div class="col-4">
+                    <p>{{dress.color}}</p>
+                </div>
+            </div> 
+
+            <hr>
+
+            <div class="row">
+                <div class="col-3">
+                    <strong>Buying Date</strong>
+                </div>
+                <div class="col-3">
+                    <strong>:</strong>
+                </div>
+                <div class="col-4">
+                    <p>{{dress.buyingdate}}</p>
+                </div>
+            </div> 
+
+            <hr>
+
+            <div class="row">
+                <div class="col-3">
+                    <strong>Made By</strong>
+                </div>
+                <div class="col-3">
+                    <strong>:</strong>
+                </div>
+                <div class="col-4">
+                    <p>{{dress.madeby}}</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-5">
+                    <a routerLink="/clothes" class="btn btn-primary text-right">Back</a>
+                </div>
+               
+            </div>
+            
+        </div>
+
+       
+
+        <div class="col-4">
+            <img class="card-img img-fluid"  [src]="dress.image" alt="Clothe Image">
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,95 @@
+<div class="container ">
+    
+    <form [formGroup]="clotheform" >
+
+        <div class="form-row mb-5">
+           <h2>Add New Clothe</h2>
+        </div>
+
+        <div class="form-row">
+
+          <div class="form-group col-md-6">
+            <label>Name</label>
+            <input class="form-control" [class.is-invalid]="name?.invalid && (name?.dirty || name?.touched)" placeholder="Enter clothe name" formControlName="name">
+            <span *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+              <small *ngIf="name.errors.required" class="text text-danger">Name is required</small>
+            </span>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputState">Clothe Type</label>
+            <select class="form-control" formControlName="type">
+              <option value="null">---Choose Clothe Type---</option>
+              <option value="Jumpsuit">Jumpsuit</option>
+              <option value="Top">Top</option>
+              <option value="Short Pants">Short Pants</option>
+              <option value="Dress">Dress</option>
+              <option value="Skirt">Skirt</option>
+            </select>
+           </div> 
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label >Price</label>
+                <input type="text" class="form-control" [class.is-invalid]="price?.invalid && (price?.dirty || price?.touched)" placeholder="Enter Price" formControlName="price">
+                <span *ngIf="price?.invalid && (price?.dirty || price?.touched)">
+                  <small *ngIf="price.errors.required" class="text text-danger">Price is required</small>
+                  <small *ngIf="price.errors.min" class="text text-danger">1000 is lowest cost </small>
+                  <small *ngIf="price.errors.max" class="text text-danger">more than 50000 must not exceed</small>
+                </span>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label >Color</label>
+                <input type="text" class="form-control" placeholder="Enter Color" [class.is-invalid]="color?.invalid && (color?.dirty || color?.touched)" formControlName="color">
+                <span *ngIf="color?.invalid && (color?.dirty || color?.touched)">
+                  <small *ngIf="color.errors.required" class="text text-danger">Color is required</small>
+                </span>
+              </div>    
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputDate">Date</label>
+            <input type="date" class="form-control"  placeholder="Enter Date" formControlName="buyingdate">
+          </div>
+          
+          <div class="form-group col-md-6">
+            <label >Made By</label>
+            <input  class="form-control"  placeholder="Made By" formControlName="madeby">
+            <span *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+              <small *ngIf="name.errors.required" class="text text-danger">Clothe Material is required</small>
+            </span>
+          </div>     
+        </div>
+
+       
+        <div class="form-row">
+       
+          <div class="form-group col-md-6">
+            <label>Choose Size</label>
+              <input type="text" class="form-control" placeholder="Choose Size"  formControlName="size">
+          </div>
+       
+          <div class="form-group col-md-6">
+            <label>Choose Images</label>
+              <input type="file" class="form-control"  #photo>  
+          </div>  
+
+        </div>
+
+          <div class="form-row">
+            <div class="form-inline my-2 my-lg-0">
+                <div class="form-group col-md-6">
+                    <button type="submit" class="btn btn-success" (click)="save(photo.files[0])">Save</button>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <button type="button" class="btn btn-danger" (click)="cancle()">Cancle</button>
+                </div>
+
+            </div >
+          </div>
+       
+    </form>
+    
+</div>

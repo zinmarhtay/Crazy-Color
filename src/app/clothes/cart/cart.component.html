@@ -1,0 +1,14 @@
+  
+ <div class="card-columns">
+  <div class="card pt-2" *ngFor="let c of clothe">
+    <img class="card-img img-fluid"  [src]="c.image" alt="Clothe Image">
+    <div class="card-body">
+      <h5 class="card-title">{{c.name}}</h5>
+      <p class="card-text">{{c.price}}</div>
+
+    <div class="card-footer text-right"> 
+          <a  class="btn btn-link btn-primary" routerLink="/clothes/{{c.id}}">Detail</a>
+          <button type="button" class="btn btn-link btn-danger" (click)="delete(c.id)">Delete</button>
+    </div>
+  </div>  
+</div>
